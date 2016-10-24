@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<p>You're not allowed.</p>
+	<div id="addMovie">
+	 <p>To add a movie:</p>
+	 <form action="#" th:action="@{/addMovie}" method="post">
+	 	<input type="submit" value="Add Movie" />
+	 </form>
+	</div>
+	<div id="seeReservations">
+		<p>To see all reservations:</p>
+		<form action="#" th:action="@{/seeReservations}" method="post">
+	 	<input type="submit" value="See All" />
+	 </form>
+	</div>
+	<div id="logOut">
+		<p th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</p>
+		<form action="#" th:action="@{/logout}" method="post">
+	 	<input type="submit" value="Sign Out" />
+	 </form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<p>How many seats do you need (max. 6)? Booking a ticket: step 4.</p>
+	<form action="#" th:action="@{/places}"  th:object="${reservation}" method="post">
+			<select th:field="*{places}">
+			  <option th:each="d : ${places}" 
+			          th:value="${d}"
+			          th:text="${d}"/>
+			</select>
+			<input type="submit" value="submit"/>  
+		</form>
+</body>
+</html>

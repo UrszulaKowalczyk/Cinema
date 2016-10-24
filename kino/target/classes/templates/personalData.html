@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<p>Please write your personal data. Booking a ticket: step 5.</p>
+	<form action="#" th:action="@{/principal}"  th:object="${reservation}" method="post">
+		<p>Name: <input required="required" type="text" th:field="*{name}" /> </p>
+		<p>Surname: <input required="required" type="text" th:field="*{surname}" /></p>
+		<input type="submit" value="Submit"/>  
+	</form>
+</body>
+</html>

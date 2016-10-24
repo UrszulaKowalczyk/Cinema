@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<div id="reservation">
+	 <p>Reserve a ticket:</p>
+	 <form action="#" th:action="@{/reserve}" method="post">
+	 	<input type="submit" value="Reserve" />
+	 </form>
+	</div>
+	<div id="admin">
+		<p>If you're an admin:</p>
+		<form action="#" th:action="@{/loggedIn}" method="post">
+	 	<input type="submit" value="Log in" />
+	 </form>
+	</div>
+	 
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<p th:text="'Thank you, your reservation is:'" />
+	<p th:text="'Day: ' + ${reservation.date2} + ' at ' + ${reservation.hour}"/>
+	<p th:text="'Film: ' + ${reservation.title}"/>
+	<p th:text="${reservation.places} + ' place(s)'"/>
+	
+	<p>Please remember to take tickets from cinema ticket office at least half an hour before a movie.</p>
+	<form action="#" th:action="@{/backToStart}" method="post">
+	 	<input type="submit" value="HomePage" />
+	 </form>
+</body>
+</html>

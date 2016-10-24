@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/myCSS.css}" href="/myCSS.css"  rel="stylesheet" type="text/css"  />
+    <style>
+
+	</style>
+</head>
+<body>
+	<h1>CINEMA</h1>
+	<form action="#" th:action="@{/addFilm}"  th:object="${film}" method="post">
+		<p>Title: <input type="text" required="required" th:field="*{title}" /> </p>
+		<p>Date: <input type="date" required="required" th:field="*{day}" /></p>
+		<p>Hour: <input type="time" required="required" th:field="*{hour}" /></p>
+		<p>Places: <input type="number" required="required" th:field="*{places}" min="20" max="60"/></p>
+		<input type="submit" value="Submit"/>  
+	</form>
+</body>
+</html>
